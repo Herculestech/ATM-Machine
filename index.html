@@ -54,7 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var balance = 1000
-        mySong.play()
+  
         function deposit(){
         var amountEntered = Number(userInput.value)
         if(amountEntered < 0){
@@ -91,6 +91,7 @@
         function checkBalance(){
             disp.innerHTML = "<h3>Your balance is $" + balance + "</h3>"
             disp.style.color = "red"
+                  mySong.play()
         }
         function extra(){
             mySong.pause()
