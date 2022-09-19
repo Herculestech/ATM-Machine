@@ -18,7 +18,7 @@
         height: 90vh;
     }
 </style>
-<body>
+<body onload ="playMysong()">
     <center>
          <div class="mt-5"></div><br><br><br>
         <h1 class="text-white">ATM MACHINE</h1>
@@ -54,7 +54,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var balance = 1000
-  
+        let playMYsong = () =>{
+            mySong.play()
+        }
         function deposit(){
         var amountEntered = Number(userInput.value)
         if(amountEntered < 0){
