@@ -18,7 +18,7 @@
         height: 90vh;
     }
 </style>
-<body onload="playMysong()">
+<body>
     <center>
          <div class="mt-5"></div><br><br><br>
         <h1 class="text-white">ATM MACHINE</h1>
@@ -54,9 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var balance = 1000
-        let playMysong = () =>{
-            mySong.play()
-        }
+        
         function deposit(){
         var amountEntered = Number(userInput.value)
         if(amountEntered < 0){
@@ -89,6 +87,7 @@
                 disp.innerHTML = `<h3>Withdrawal successful and your new balance is  ${balance} </h3>`
                 // alert("withdrawal successful and your new balance is $" + balance)
             }
+            mySong.play()
         }
         function checkBalance(){
             disp.innerHTML = "<h3>Your balance is $" + balance + "</h3>"
