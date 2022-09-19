@@ -29,6 +29,7 @@
                 <td rowspan="4">
                    <h1 id="disp"></h1>
                     <input type="text" id="userInput" class="btn btn-secondary w-100 ml-5">
+                    <audio src="./Access_Bank_-_ONE_DAY_YOU_GO_MAKE_AM.mp3" id="mySong"></audio>
                 </td>
                 <td><div class=""></div></td>
               <td><button onclick="deposit()" class="btn btn-success mt-2 ms-5">Deposit</button></td>
@@ -54,7 +55,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var balance = 1000
-        var mySong = new Audio("Access_Bank_-_ONE_DAY_YOU_GO_MAKE_AM.mp3")
         mySong.play()
         function deposit(){
         var amountEntered = Number(userInput.value)
