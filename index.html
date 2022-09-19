@@ -63,8 +63,8 @@
             alert("Enter a valid amount")
         }else{
             balance = amountEntered + balance
-            disp.innerHTML = `<h3>Your deposit was successful and your new balance is $" + ${balance}</h3>`
-            // alert("Your deposit was successful and your new balance is $" + balance)
+            disp.innerHTML = `<h3>Your deposit was successful and your new balance is $${balance}</h3>`
+            // alert("Your deposit was successful and your new balance is $${balance})
         }
         }
         function withdraw(){
@@ -74,7 +74,7 @@
                 // alert("insufficient fund")
             }else if(amountEntered==balance){
                 balance = amountEntered - balance
-                disp.innerHTML = `<h3> withdrawal successful and your new balance is $" + ${balance}</h3>`
+                disp.innerHTML = `<h3> withdrawal successful and your new balance is $${balance}</h3>`
                 // alert("withdrawal successful and your new balance is $" + balance)
             }else if (amountEntered==""){
                 disp.innerHTML = `<h3>Enter an amount to withdraw</h3>`
@@ -85,7 +85,7 @@
             }else{
                 balance = balance - amountEntered
                 disp.innerHTML = `<h3>Withdrawal successful and your new balance is  ${balance} </h3>`
-                // alert("withdrawal successful and your new balance is $" + balance)
+                // alert("withdrawal successful and your new balance is $${balance})
             }
             mySong.play()
         }
