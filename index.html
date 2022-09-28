@@ -56,16 +56,21 @@
     <script>
         var balance = 1000
         // var mySong = new Audio("Access_Bank_-_ONE_DAY_YOU_GO_MAKE_AM.mp3")
-        mySong.play()
+        // mySong.play()
         function deposit(){
         var amountEntered = Number(userInput.value)
         if(amountEntered < 0){
-            alert("Enter a valid amount")
+            disp.innerHTML = `<h3>Enter a valid amount to deposit</h3>`
+            disp.style.color = "red"
+            // alert("Enter a valid amount")
         }else if(amountEntered==0){
-            alert("Enter a valid amount")
+            disp.innerHTML = `<h3>Enter a valid amount to deposit</h3>`
+            disp.style.color = "red"
+            // alert("Enter a valid amount")
         }else{
             balance = amountEntered + balance
-            disp.innerHTML = `<h3>Your deposit was successful and your new balance is $" + ${balance}</h3>`
+            disp.innerHTML = `<h3>Your deposit was successful and your new balance is $${balance}</h3>`
+            disp.style.color = "black"
             // alert("Your deposit was successful and your new balance is $" + balance)
         }
         }
@@ -73,26 +78,32 @@
             var amountEntered = Number(userInput.value)
             if(amountEntered>balance){
                 disp.innerHTML = `<h3> Insufficient fund</h3>`
+                disp.style.color = "red"
                 // alert("insufficient fund")
             }else if(amountEntered==balance){
                 balance = amountEntered - balance
                 disp.innerHTML = `<h3> withdrawal successful and your new balance is $" + ${balance}</h3>`
+                disp.style.color = "black"
                 // alert("withdrawal successful and your new balance is $" + balance)
             }else if (amountEntered==""){
                 disp.innerHTML = `<h3>Enter an amount to withdraw</h3>`
+                disp.style.color = "red"
                 // alert("enter an amount to withdraw")
             }else if (amountEntered<0){
                 disp.innerHTML = `<h3>Out of bounds </h3>`
+                disp.style.color = "red"
                 // alert("out of bonds")
             }else{
                 balance = balance - amountEntered
-                disp.innerHTML = `<h3>Withdrawal successful and your new balance is  ${balance} </h3>`
+                disp.innerHTML = `<h3>Withdrawal successful and your new balance is $${balance} </h3>`
+                disp.style.color = "black"
                 // alert("withdrawal successful and your new balance is $" + balance)
             }
         }
         function checkBalance(){
             disp.innerHTML = "<h3>Your balance is $" + balance + "</h3>"
-            disp.style.color = "red"
+            disp.style.color = "black"
+            mySong.play()
         }
         function extra(){
             mySong.pause()
@@ -100,3 +111,5 @@
     </script>
 </body>
 </html>
+
+
